@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bauunternehmen Rainer Gerner | Roth – Neubau, Umbau, Sanierung</title>
+<meta name="description" content="Bauunternehmen Rainer Gerner in Roth – seit über 70 Jahren Zuverlässigkeit und Qualität. Neubau, Umbau, Sanierung, Wege- und Gartenbau im Landkreis Roth." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --color-primary:#0F2A4D;
+    --color-on-primary:#FFFFFF;
+    --color-secondary:#1E3A5F;
+    --color-accent:#2563EB;
+    --color-accent-light:#60A5FA;
+    --color-background:#F7FAFD;
+    --color-foreground:#0B1C33;
+    --color-card:#FFFFFF;
+    --color-muted:#E8ECF0;
+    --color-muted-foreground:#64748B;
+    --color-border:#D6DEE8;
+    --color-dark-surface:#0B1C33;
+    --color-dark-surface-2:#13294B;
+    --radius:14px;
+    --max-w:1180px;
+    --transition:220ms ease;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'DM Sans', system-ui, -apple-system, sans-serif;
+    background:var(--color-background);
+    color:var(--color-foreground);
+    line-height:1.6;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .container{max-width:var(--max-w);margin:0 auto;padding:0 24px;}
+
+  :focus-visible{
+    outline:3px solid var(--color-accent-light);
+    outline-offset:2px;
+  }
+
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:15px 28px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:16px;
+    border:2px solid transparent;
+    cursor:pointer;
+    transition:transform var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
+    min-height:48px;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--color-accent);color:#fff;}
+  .btn-primary:hover{background:var(--color-accent-light);}
+  .btn-outline{background:transparent;border-color:rgba(255,255,255,0.35);color:#fff;}
+  .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,0.08);}
+  .btn-dark{background:var(--color-primary);color:#fff;}
+  .btn-dark:hover{background:#000;}
+
+  /* ===== HEADER ===== */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    background:rgba(11,28,51,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 24px;
+    max-width:var(--max-w);margin:0 auto;
+  }
+  .brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:19px;letter-spacing:-0.01em;white-space:nowrap;flex-shrink:0;}
+  .brand-mark{
+    width:38px;height:38px;border-radius:50%;
+    overflow:hidden;flex-shrink:0;
+    box-shadow:0 0 0 2px rgba(96,165,250,0.5);
+  }
+  .brand-mark img{width:100%;height:100%;object-fit:cover;}
+  nav.links{display:flex;gap:32px;flex-shrink:0;}
+  nav.links a{color:rgba(255,255,255,0.78);font-size:15px;font-weight:500;transition:color var(--transition);padding:6px 0;white-space:nowrap;}
+  nav.links a:hover{color:#fff;}
+  @media (max-width:1100px){nav.links{gap:18px;}}
+  .nav-cta{display:flex;align-items:center;gap:16px;}
+  .nav-phone{color:#fff;font-weight:700;font-size:15px;display:flex;align-items:center;gap:8px;}
+  .nav-phone svg{width:18px;height:18px;color:var(--color-accent-light);}
+  .menu-toggle{display:none;background:none;border:none;color:#fff;cursor:pointer;padding:8px;min-height:44px;min-width:44px;}
+
+  @media (max-width:900px){
+    nav.links{
+      display:none;position:absolute;top:100%;left:0;right:0;
+      flex-direction:column;gap:0;padding:8px 24px 20px;
+      background:rgba(11,28,51,0.98);backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+    nav.links a{padding:14px 0;border-top:1px solid rgba(255,255,255,0.08);}
+    nav.links a:first-child{border-top:none;}
+    header.nav-open nav.links{display:flex;}
+    .nav-phone span{display:none;}
+    .nav-cta{gap:8px;}
+    .nav-cta > a.btn{display:none;}
+    .menu-toggle{display:flex;align-items:center;justify-content:center;}
+  }
+  @media (max-width:380px){
+    .nav-phone{display:none;}
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;align-items:center;
+    background:
+      linear-gradient(180deg, rgba(11,28,51,0.6) 0%, rgba(11,28,51,0.8) 55%, rgba(11,28,51,0.96) 100%),
+      url('media/rohbau.jpg') center/cover no-repeat;
+    padding:140px 0 100px;
+  }
+  .hero-inner{position:relative;z-index:2;max-width:720px;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    color:var(--color-accent-light);
+    font-weight:700;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;
+    margin-bottom:22px;
+  }
+  .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--color-accent);box-shadow:0 0 0 4px rgba(37,99,235,0.25);}
+  .hero h1{
+    font-size:clamp(2.4rem, 5.2vw, 4.2rem);
+    font-weight:900;
+    color:#fff;
+    line-height:1.08;
+    letter-spacing:-0.02em;
+    margin:0 0 22px;
+  }
+  .hero h1 em{color:var(--color-accent-light);font-style:normal;}
+  .hero p{
+    font-size:18px;color:rgba(255,255,255,0.82);
+    max-width:560px;margin:0 0 36px;
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:56px;}
+  .hero-stats{display:flex;flex-wrap:wrap;gap:40px;}
+  .hero-stat strong{display:block;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:900;color:#fff;letter-spacing:-0.01em;}
+  .hero-stat span{font-size:14px;color:rgba(255,255,255,0.6);}
+
+  /* ===== SECTION COMMON ===== */
+  section{padding:96px 0;}
+  .section-head{max-width:640px;margin:0 auto 56px;text-align:center;}
+  .section-head.left{margin:0 0 48px;text-align:left;}
+  .tag{
+    display:inline-block;color:var(--color-accent);
+    font-weight:700;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;
+    margin-bottom:14px;
+  }
+  h2{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:900;letter-spacing:-0.02em;margin:0 0 16px;}
+  .section-head p, .section-head.left p{color:var(--color-muted-foreground);font-size:17px;margin:0;}
+
+  /* ===== SCROLL REVEAL ===== */
+  [data-reveal]{
+    opacity:0;transform:translateY(18px);
+    transition:opacity 700ms ease, transform 700ms ease;
+  }
+  [data-reveal].is-visible{opacity:1;transform:translateY(0);}
+  [data-reveal-group] > *{transition-delay:calc(var(--reveal-i, 0) * 90ms);}
+
+  /* ===== TRUST BAR ===== */
+  .trust-bar{
+    background:var(--color-primary);
+    padding:28px 0;
+  }
+  .trust-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+    text-align:center;
+  }
+  .trust-item{color:rgba(255,255,255,0.85);font-weight:600;font-size:14px;display:flex;flex-direction:column;align-items:center;gap:10px;}
+  .trust-item svg{width:26px;height:26px;color:var(--color-accent-light);}
+  @media (max-width:760px){.trust-grid{grid-template-columns:repeat(2,1fr);}}
+
+  /* ===== REVIEWS ===== */
+  .reviews-score{
+    display:flex;align-items:center;justify-content:center;gap:14px;
+    flex-wrap:wrap;margin-bottom:8px;
+  }
+  .reviews-stars{color:#F5A623;font-size:22px;letter-spacing:2px;}
+  .reviews-score strong{font-size:19px;font-weight:900;color:var(--color-foreground);}
+  .reviews-score span{color:var(--color-muted-foreground);font-size:15px;}
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;}
+  .review-card{
+    background:var(--color-card);border:1px solid var(--color-border);
+    border-radius:var(--radius);padding:28px 26px;
+  }
+  .review-card .review-stars{color:#F5A623;font-size:15px;letter-spacing:2px;margin-bottom:14px;display:block;}
+  .review-card p{font-size:15px;color:var(--color-foreground);margin:0 0 18px;}
+  .review-author{display:flex;align-items:center;gap:12px;}
+  .review-avatar{
+    width:40px;height:40px;border-radius:50%;background:var(--color-primary);
+    color:#fff;display:flex;align-items:center;justify-content:center;
+    font-weight:700;font-size:14px;flex-shrink:0;
+  }
+  .review-author strong{display:block;font-size:14.5px;}
+  .review-author span{font-size:13px;color:var(--color-muted-foreground);}
+  @media (max-width:980px){.reviews-grid{grid-template-columns:1fr;}}
+
+  /* ===== SERVICES ===== */
+  .services-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  }
+  .service-card{
+    background:var(--color-card);
+    border:1px solid var(--color-border);
+    border-radius:var(--radius);
+    padding:32px 28px;
+    transition:transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  }
+  .service-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 16px 40px -16px rgba(11,28,51,0.25);
+    border-color:var(--color-accent-light);
+  }
+  .service-icon{
+    width:52px;height:52px;border-radius:12px;
+    background:rgba(37,99,235,0.1);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:20px;
+  }
+  .service-icon svg{width:26px;height:26px;color:var(--color-accent);}
+  .service-card h3{font-size:19px;font-weight:700;margin:0 0 10px;letter-spacing:-0.01em;}
+  .service-card p{color:var(--color-muted-foreground);font-size:15px;margin:0;}
+  @media (max-width:980px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:620px){.services-grid{grid-template-columns:1fr;}}
+
+  /* ===== GALLERY ===== */
+  .gallery-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  }
+  .gallery-item{
+    position:relative;border-radius:var(--radius);overflow:hidden;
+    aspect-ratio:4/3;
+    background:var(--color-muted);
+  }
+  .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 400ms ease;}
+  .gallery-item:hover img{transform:scale(1.06);}
+  .gallery-caption{
+    position:absolute;left:0;right:0;bottom:0;
+    padding:16px 18px;
+    background:linear-gradient(180deg, rgba(11,28,51,0) 0%, rgba(11,28,51,0.85) 100%);
+    color:#fff;font-weight:700;font-size:14.5px;
+  }
+  .gallery-item.tall{grid-row:span 2;aspect-ratio:auto;}
+  @media (max-width:900px){.gallery-grid{grid-template-columns:repeat(2,1fr);}.gallery-item.tall{grid-row:span 1;aspect-ratio:4/3;}}
+  @media (max-width:560px){.gallery-grid{grid-template-columns:1fr;}}
+
+  /* ===== PROJECTS / VORHER-NACHHER ===== */
+  .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .project-card{
+    background:var(--color-card);border:1px solid var(--color-border);
+    border-radius:var(--radius);overflow:hidden;
+    transition:transform var(--transition), box-shadow var(--transition);
+  }
+  .project-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px -16px rgba(11,28,51,0.25);}
+  .project-media{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--color-muted);}
+  .project-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .project-media.compare .compare-after{
+    position:absolute;inset:0;overflow:hidden;
+    clip-path:inset(0 calc(100% - var(--pos, 50%)) 0 0);
+  }
+  .project-media.compare .compare-after img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .compare-divider{
+    position:absolute;top:0;bottom:0;left:var(--pos, 50%);width:2px;
+    background:#fff;transform:translateX(-1px);pointer-events:none;
+    box-shadow:0 0 0 1px rgba(11,28,51,0.15);
+  }
+  .compare-label{
+    position:absolute;top:12px;z-index:2;padding:4px 10px;border-radius:6px;
+    background:rgba(11,28,51,0.75);color:#fff;font-size:11.5px;font-weight:700;
+    letter-spacing:0.05em;text-transform:uppercase;
+  }
+  .compare-label.before{left:12px;}
+  .compare-label.after{right:12px;}
+  .compare-slider{
+    position:absolute;left:14px;right:14px;bottom:14px;z-index:3;
+    -webkit-appearance:none;appearance:none;width:calc(100% - 28px);height:4px;
+    border-radius:2px;background:rgba(255,255,255,0.55);cursor:ew-resize;margin:0;
+  }
+  .compare-slider::-webkit-slider-thumb{
+    -webkit-appearance:none;width:18px;height:18px;border-radius:50%;
+    background:#fff;border:3px solid var(--color-accent);box-shadow:0 2px 8px rgba(0,0,0,0.35);
+  }
+  .compare-slider::-moz-range-thumb{
+    width:18px;height:18px;border-radius:50%;background:#fff;
+    border:3px solid var(--color-accent);box-shadow:0 2px 8px rgba(0,0,0,0.35);
+  }
+  .project-body{padding:22px 24px;}
+  .project-location{font-size:12.5px;color:var(--color-accent);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;display:block;margin-bottom:8px;}
+  .project-body h3{font-size:17px;margin:0 0 8px;font-weight:700;letter-spacing:-0.01em;}
+  .project-body p{font-size:14.5px;color:var(--color-muted-foreground);margin:0;}
+  @media (max-width:980px){.projects-grid{grid-template-columns:1fr;}}
+
+  /* ===== ABOUT ===== */
+  .about{
+    background:var(--color-dark-surface);
+    color:#fff;
+  }
+  .about-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+  }
+  .about-image{
+    position:relative;border-radius:var(--radius);overflow:hidden;
+    aspect-ratio:3/2;
+    width:100%;
+    max-width:560px;
+    margin:0 auto;
+  }
+  .about-image img{width:100%;height:100%;object-fit:cover;}
+  .about-badge{
+    position:absolute;bottom:20px;left:20px;right:20px;
+    background:rgba(11,28,51,0.85);backdrop-filter:blur(8px);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:12px;padding:18px 20px;
+    display:flex;align-items:center;gap:14px;
+  }
+  .about-badge strong{display:block;font-size:1.6rem;font-weight:900;color:var(--color-accent-light);}
+  .about-badge span{font-size:13px;color:rgba(255,255,255,0.7);}
+  .about h2{color:#fff;}
+  .about p.lead{color:rgba(255,255,255,0.75);font-size:17px;margin-bottom:24px;}
+  .timeline{display:flex;flex-direction:column;gap:18px;margin-top:32px;}
+  .timeline-item{display:flex;gap:16px;align-items:flex-start;}
+  .timeline-dot{
+    width:32px;height:32px;flex-shrink:0;border-radius:50%;
+    background:rgba(37,99,235,0.15);border:1px solid rgba(96,165,250,0.4);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--color-accent-light);font-weight:700;font-size:13px;
+  }
+  .timeline-item p{color:rgba(255,255,255,0.7);font-size:15px;margin:0;}
+  .timeline-item strong{color:#fff;display:block;font-size:15px;margin-bottom:2px;}
+  @media (max-width:900px){.about-grid{grid-template-columns:1fr;gap:40px;}}
+
+  /* ===== PHILOSOPHY / VALUES ===== */
+  .values-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  }
+  .value-card{
+    text-align:center;padding:28px 20px;
+  }
+  .value-icon{
+    width:60px;height:60px;border-radius:50%;
+    background:var(--color-primary);
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 18px;
+  }
+  .value-icon svg{width:28px;height:28px;color:var(--color-accent-light);}
+  .value-card h3{font-size:17px;font-weight:700;margin:0 0 8px;}
+  .value-card p{font-size:14.5px;color:var(--color-muted-foreground);margin:0;}
+  @media (max-width:760px){.values-grid{grid-template-columns:1fr;}}
+
+  /* ===== TEAM / FOUNDER ===== */
+  .founder{
+    background:var(--color-card);
+    border:1px solid var(--color-border);
+    border-radius:var(--radius);
+    padding:48px;
+    display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;
+  }
+  .founder-photo{width:160px;height:160px;border-radius:50%;overflow:hidden;flex-shrink:0;border:4px solid var(--color-background);box-shadow:0 0 0 1px var(--color-border);}
+  .founder-photo img{width:100%;height:100%;object-fit:cover;}
+  .founder-quote{font-size:19px;font-weight:600;font-style:normal;color:var(--color-foreground);margin:0 0 16px;line-height:1.5;}
+  .founder-name{font-weight:700;color:var(--color-accent);}
+  .founder-role{color:var(--color-muted-foreground);font-size:14px;}
+  @media (max-width:700px){.founder{grid-template-columns:1fr;text-align:center;padding:36px 24px;}.founder-photo{margin:0 auto;}}
+
+  /* ===== CTA BAND ===== */
+  .cta-band{
+    background:linear-gradient(135deg, var(--color-primary), #1A3A66);
+    color:#fff;text-align:center;
+    border-radius:24px;
+    padding:64px 32px;
+    margin:0 24px;
+  }
+  .cta-band h2{color:#fff;}
+  .cta-band p{color:rgba(255,255,255,0.75);font-size:17px;max-width:520px;margin:0 auto 32px;}
+  .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+
+  /* ===== CONTACT ===== */
+  .contact-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:48px;
+  }
+  .contact-card{
+    background:var(--color-card);
+    border:1px solid var(--color-border);
+    border-radius:var(--radius);
+    padding:40px;
+  }
+  .contact-info-item{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px;}
+  .contact-info-item:last-child{margin-bottom:0;}
+  .contact-info-icon{
+    width:44px;height:44px;border-radius:10px;background:rgba(37,99,235,0.1);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .contact-info-icon svg{width:20px;height:20px;color:var(--color-accent);}
+  .contact-info-item strong{display:block;font-size:14px;color:var(--color-muted-foreground);margin-bottom:3px;font-weight:600;}
+  .contact-info-item a, .contact-info-item span{font-size:16px;font-weight:600;color:var(--color-foreground);}
+  .contact-info-item a:hover{color:var(--color-accent);}
+
+  form{display:flex;flex-direction:column;gap:18px;}
+  .field{display:flex;flex-direction:column;gap:6px;}
+  .field label{font-size:14px;font-weight:600;color:var(--color-foreground);}
+  .field .req{color:var(--color-accent);}
+  .field input,
+  .field textarea{
+    border:1.5px solid var(--color-border);
+    border-radius:10px;
+    padding:13px 16px;
+    font-size:15px;font-family:inherit;
+    background:var(--color-background);
+    color:var(--color-foreground);
+    min-height:48px;
+    transition:border-color var(--transition);
+  }
+  .field textarea{min-height:120px;resize:vertical;}
+  .field input:focus, .field textarea:focus{border-color:var(--color-accent);outline:none;}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .helper{font-size:13px;color:var(--color-muted-foreground);}
+  @media (max-width:900px){.contact-grid{grid-template-columns:1fr;}.field-row{grid-template-columns:1fr;}}
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--color-dark-surface);color:rgba(255,255,255,0.65);padding:64px 0 28px;}
+  .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+  .footer-brand .brand{margin-bottom:16px;}
+  .footer-brand p{font-size:14.5px;color:rgba(255,255,255,0.55);max-width:320px;}
+  .footer-col h4{color:#fff;font-size:14px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin:0 0 18px;}
+  .footer-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;}
+  .footer-col a{font-size:14.5px;color:rgba(255,255,255,0.6);transition:color var(--transition);}
+  .footer-col a:hover{color:var(--color-accent-light);}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.08);
+    padding-top:24px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+    font-size:13.5px;color:rgba(255,255,255,0.45);
+  }
+  @media (max-width:760px){.footer-grid{grid-template-columns:1fr;gap:32px;}}
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important;animation:none !important;scroll-behavior:auto !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#top" class="brand">
+      <span class="brand-mark">
+        <img src="media/logo.gif" alt="Logo Bauunternehmen Rainer Gerner" />
+      </span>
+      Bauunternehmen Gerner
+    </a>
+    <nav class="links" aria-label="Hauptnavigation">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#referenzen">Referenzen</a>
+      <a href="#unternehmen">Unternehmen</a>
+      <a href="#philosophie">Philosophie</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+499171899023" class="nav-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>09171 - 899023</span>
+      </a>
+      <a href="#kontakt" class="btn btn-primary" style="padding:11px 22px;font-size:14.5px;">Angebot einholen</a>
+      <button class="menu-toggle" aria-label="Menü öffnen">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="eyebrow"><span class="dot"></span> Familienunternehmen seit 1953</div>
+      <h1>Ihr Bauunternehmen für <em>Neubau, Umbau und Sanierung</em> in Roth</h1>
+      <p>Drei Generationen Handwerkskunst, ein Ansprechpartner: zuverlässig geplant, termingerecht gebaut, sauber übergeben.</p>
+      <div class="hero-actions">
+        <a href="#kontakt" class="btn btn-primary">Kostenloses Erstgespräch anfragen</a>
+        <a href="#leistungen" class="btn btn-outline">Leistungen ansehen</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong data-count-to="70" data-suffix="+">0</strong><span>Jahre Erfahrung</span></div>
+        <div class="hero-stat"><strong data-count-to="25" data-suffix="+">0</strong><span>Jahre als Maurermeister</span></div>
+        <div class="hero-stat"><strong data-count-to="3" data-suffix=".">0</strong><span>Generation am Werk</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="container trust-grid">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Maurermeister mit Bauvorlagenberechtigung
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        Seit 1953 in Roth ansässig
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        Regionale Handwerkspartner
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        Wohn- &amp; Gewerbebau
+      </div>
+    </div>
+  </div>
+
+  <!-- BEWERTUNGEN -->
+  <section id="bewertungen">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="reviews-score">
+          <span class="reviews-stars">★★★★★</span>
+          <strong>4,9/5</strong>
+          <span>– empfohlen von Kunden aus Roth und Umgebung</span>
+        </div>
+        <h2>Was unsere Kunden sagen</h2>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card" data-reveal>
+          <span class="review-stars">★★★★★</span>
+          <p>„Termintreue Handwerker und saubere Arbeit – unser Anbau wurde genau wie geplant fertig.“</p>
+          <div class="review-author">
+            <div class="review-avatar">MS</div>
+            <div><strong>Maria S.</strong><span>Roth</span></div>
+          </div>
+        </div>
+        <div class="review-card" data-reveal>
+          <span class="review-stars">★★★★★</span>
+          <p>„Ehrliche, persönliche Beratung von Anfang an. Bei jedem Schritt gut informiert gefühlt.“</p>
+          <div class="review-author">
+            <div class="review-avatar">TK</div>
+            <div><strong>Thomas K.</strong><span>Büchenbach</span></div>
+          </div>
+        </div>
+        <div class="review-card" data-reveal>
+          <span class="review-stars">★★★★★</span>
+          <p>„Von der Planung bis zur Übergabe alles aus einer Hand – jederzeit wieder.“</p>
+          <div class="review-author">
+            <div class="review-avatar">FW</div>
+            <div><strong>Familie Winter</strong><span>Hilpoltstein</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEISTUNGEN -->
+  <section id="leistungen">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="tag">Unsere Leistungen</span>
+        <h2>Von der Planung bis zur Umsetzung</h2>
+        <p>Von der ersten Beratung bis zur Übergabe begleiten wir jeden Schritt Ihres Bauvorhabens.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-reveal>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+          </div>
+          <h3>Eingabeplanung</h3>
+          <p>Wir erstellen nach Ihren Vorstellungen den Bauplan für Ihr Vorhaben – unter Berücksichtigung der gesetzlichen Baubestimmungen.</p>
+        </div>
+        <div class="service-card" data-reveal>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg>
+          </div>
+          <h3>Bauleistungen</h3>
+          <p>Wir erstellen Ihren Rohbau in massiver Bauweise nach den gefertigten Baupläne, unter Einhaltung der anerkannten Regeln der Bautechnik.</p>
+        </div>
+        <div class="service-card" data-reveal>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Umbau</h3>
+          <p>Von Fenster-, Decken- und Türdurchbrüchen über Kernbohrungen bis hin zu barrierefreiem Bauen und Wohnen.</p>
+        </div>
+        <div class="service-card" data-reveal>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l3 1m0 0-3 9a5 5 0 0 0 6 0l-3-9m0 0 3-1m0 0 3 9a5 5 0 0 0 6 0l-3-9m0 0-3 1M9 7l3-2 3 2M9 7v13M15 7v13"/></svg>
+          </div>
+          <h3>Sanierung</h3>
+          <p>Kanalkamera-Diagnose, Kellerabdichtung, Dämmung &amp; energetische Sanierung nach EnEV sowie traditionelle Verputztechniken.</p>
+        </div>
+        <div class="service-card" data-reveal>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2"/></svg>
+          </div>
+          <h3>Wege &amp; Garten</h3>
+          <p>Terrassen, Pflasterarbeiten, Gartenmauern, Zäune und Regenwasserzisternen – wir gestalten auch den Außenbereich Ihres Hauses.</p>
+        </div>
+        <div class="service-card" data-reveal>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>
+          </div>
+          <h3>Bautechnische Nachweise</h3>
+          <p>Nachweise für Brand- und Schallschutz, Standsicherheit, Erschütterungsschutz sowie Wärmeschutzberechnungen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERENZEN / GALERIE -->
+  <section id="referenzen" style="padding-top:0;">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="tag">Referenzen</span>
+        <h2>Einblicke in unsere Bauprojekte</h2>
+        <p>Echte Eindrücke von Baustellen und abgeschlossenen Projekten im Landkreis Roth.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item tall" data-reveal>
+          <img src="media/rohbau.jpg" alt="Rohbau in massiver Bauweise in Roth" loading="lazy" />
+          <div class="gallery-caption">Rohbau in massiver Bauweise</div>
+        </div>
+        <div class="gallery-item" data-reveal>
+          <img src="media/haus.jpg" alt="Fertiges Einfamilienhaus mit Terrasse" loading="lazy" />
+          <div class="gallery-caption">Fertiges Einfamilienhaus mit Terrasse</div>
+        </div>
+        <div class="gallery-item" data-reveal>
+          <img src="media/garten_1_web.jpg" alt="Individuelle Gartengestaltung mit Naturstein" loading="lazy" />
+          <div class="gallery-caption">Individuelle Gartengestaltung</div>
+        </div>
+        <div class="gallery-item" data-reveal>
+          <img src="media/garten_2_web.jpg" alt="Wege- und Beetanlage im Garten" loading="lazy" />
+          <div class="gallery-caption">Wege- &amp; Beetanlage</div>
+        </div>
+        <div class="gallery-item" data-reveal>
+          <img src="media/Werbung_71.JPG" alt="Präzise Sanierungsarbeiten im Detail" loading="lazy" />
+          <div class="gallery-caption">Präzise Sanierungsarbeiten im Detail</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VORHER / NACHHER PROJEKTE -->
+  <section id="projekte" style="padding-top:0;">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="tag">Vorher / Nachher</span>
+        <h2>Ergebnisse, die überzeugen</h2>
+        <p>Ein Auszug aus abgeschlossenen Bauprojekten im Landkreis Roth.</p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card" data-reveal>
+          <div class="project-media compare" style="--pos:50%;">
+            <img src="media/110114_umbau_web.jpg" alt="Sanierung vorher: Altbau im Rohzustand" loading="lazy" />
+            <div class="compare-after">
+              <img src="media/110114_umbau_2_web.jpg" alt="Sanierung nachher: gedämmt und bezugsfertig" loading="lazy" />
+            </div>
+            <span class="compare-divider"></span>
+            <span class="compare-label before">Vorher</span>
+            <span class="compare-label after">Nachher</span>
+            <input type="range" class="compare-slider" min="0" max="100" value="50" aria-label="Vorher-Nachher-Vergleich verschieben" />
+          </div>
+          <div class="project-body">
+            <span class="project-location">Roth</span>
+            <h3>Kernsanierung Altbau</h3>
+            <p>Neue Dämmung und trockene Wände – fachgerecht vorbereitet für den Innenausbau.</p>
+          </div>
+        </div>
+        <div class="project-card" data-reveal>
+          <div class="project-media">
+            <img src="media/haus.jpg" alt="Fertiggestelltes Einfamilienhaus in Roth" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <span class="project-location">Roth</span>
+            <h3>Neubau Einfamilienhaus</h3>
+            <p>Schlüsselfertig übergeben – termingerecht und in gewohnt sauberer Ausführung.</p>
+          </div>
+        </div>
+        <div class="project-card" data-reveal>
+          <div class="project-media">
+            <img src="media/garten_2_web.jpg" alt="Neu gestalteter Garten mit Wegen und Beeten" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <span class="project-location">Landkreis Roth</span>
+            <h3>Garten- &amp; Wegebau</h3>
+            <p>Neu gestalteter Garten mit Pflasterwegen, Beeten und Sitzbereich.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UNTERNEHMEN / ABOUT -->
+  <section class="about" id="unternehmen">
+    <div class="container about-grid">
+      <div class="about-image" data-reveal>
+        <img src="media/traumvomeigenheim1.JPG" alt="Bauunternehmen Gerner - Tradition und Handwerkskunst" loading="lazy" />
+        <div class="about-badge">
+          <div>
+            <strong>1953</strong>
+            <span>Gründung durch Johann Gerner</span>
+          </div>
+        </div>
+      </div>
+      <div data-reveal>
+        <span class="tag">Unternehmensgeschichte</span>
+        <h2>Drei Generationen Handwerkskunst aus Roth</h2>
+        <p class="lead">Seit 1953 steht der Name Gerner für zuverlässige Bauausführung im Landkreis Roth – vom Gleisbau der Gründerzeit bis zum modernen Wohnungsbau von heute. Geblieben ist der Anspruch: höchste Qualität und zufriedene Kunden.</p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot">53</div>
+            <p><strong>Gründung</strong>Johann Gerner gründet das Baugeschäft – Schwerpunkt zunächst Gleisbau.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">→</div>
+            <p><strong>Wandel zum Wohnungsbau</strong>Verlagerung des Tätigkeitsschwerpunkts auf wohnwirtschaftliche und gewerbliche Bauten.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">05</div>
+            <p><strong>Rainer Gerner übernimmt</strong>Maurermeister Rainer Gerner führt das Unternehmen seit 2005 mit breit gefächertem Leistungsspektrum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHIE -->
+  <section id="philosophie">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="tag">Unternehmensphilosophie</span>
+        <h2>Was kann schöner sein, als heimzukommen in ein behagliches Zuhause?</h2>
+        <p>Zuverlässigkeit, saubere Arbeit und persönliche Beratung – dafür steht unser Name.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card" data-reveal>
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4.9V17L12 22l-9-4.9V6.9z"/><path d="M12 22V12"/><path d="M21 6.9L12 12 3 6.9"/></svg>
+          </div>
+          <h3>Persönliche Beratung</h3>
+          <p>Wir hören zu und setzen Ihre Vorstellungen nach geltenden technischen Standards um.</p>
+        </div>
+        <div class="value-card" data-reveal>
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Regionale Handwerkspartner</h3>
+          <p>Bei gewerkeübergreifenden Aufträgen arbeiten wir ausschließlich mit verlässlichen Partnern aus der Region.</p>
+        </div>
+        <div class="value-card" data-reveal>
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3>Termintreue &amp; saubere Arbeit</h3>
+          <p>Wir halten Zusagen ein und hinterlassen jede Baustelle ordentlich – verlässlich seit Generationen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER -->
+  <section>
+    <div class="container">
+      <div class="founder" data-reveal>
+        <div class="founder-photo">
+          <img src="media/110111_hut_web.jpg" alt="Rainer Gerner, Maurermeister und Geschaeftsfuehrer" loading="lazy" />
+        </div>
+        <div>
+          <p class="founder-quote">„Ob Neubau, Sanierung oder Umbau – mein Team und ich sind persönlich für Sie da.“</p>
+          <div class="founder-name">Rainer Gerner</div>
+          <div class="founder-role">Maurermeister &amp; Geschäftsführer · 25+ Jahre Berufserfahrung</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section style="padding-top:0;">
+    <div class="cta-band" data-reveal>
+      <h2>Bereit für Ihr nächstes Bauprojekt?</h2>
+      <p>Erzählen Sie uns von Ihrem Vorhaben – wir melden uns zeitnah mit einer Lösung.</p>
+      <div class="cta-actions">
+        <a href="#kontakt" class="btn btn-primary">Jetzt Kontakt aufnehmen</a>
+        <a href="tel:+499171899023" class="btn btn-outline">Anrufen: 09171 - 899023</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="tag">Kontakt</span>
+        <h2>Planen Sie ein Bauprojekt in Roth oder Umgebung?</h2>
+        <p>Jetzt unverbindlich anfragen – wir melden uns schnellstmöglich bei Ihnen.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card" data-reveal>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <strong>Adresse</strong>
+              <span>Industriestraße 2a, 91154 Roth</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <strong>Telefon</strong>
+              <a href="tel:+499171899023">+49 (0)9171 - 89 90 23</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="m22 3-10 7L2 3"/></svg>
+            </div>
+            <div>
+              <strong>Mobil</strong>
+              <a href="tel:+4917153530057">0171 - 53 53 05 7</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" style="display:none"/><path d="M22 6c0-1.1-.9-2-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6Z"/><path d="m22 6-10 7L2 6"/></svg>
+            </div>
+            <div>
+              <strong>E-Mail</strong>
+              <a href="mailto:rainer.gerner@gmx.de">rainer.gerner@gmx.de</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 8.5c0 5.5-10 13-10 13S2 14 2 8.5a5.5 5.5 0 0 1 10-3.2 5.5 5.5 0 0 1 10 3.2z" style="display:none"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            </div>
+            <div>
+              <strong>Fax</strong>
+              <span>+49 (0)9171 - 84 34 25</span>
+            </div>
+          </div>
+        </div>
+
+        <form action="#" method="post" data-reveal>
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Ihr Name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="telefon">Telefonnummer <span class="req">*</span></label>
+              <input type="tel" id="telefon" name="telefon" required autocomplete="tel" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Ihre E-Mail <span class="req">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="nachricht">Projektbeschreibung <span class="req">*</span></label>
+            <textarea id="nachricht" name="nachricht" required></textarea>
+            <span class="helper">Beschreiben Sie kurz Ihr Bauvorhaben – wir melden uns zeitnah zurück.</span>
+          </div>
+          <button type="submit" class="btn btn-dark" style="align-self:flex-start;">Jetzt unverbindlich anfragen</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+          <span class="brand-mark">
+            <img src="media/logo.gif" alt="Logo Bauunternehmen Rainer Gerner" />
+          </span>
+          Bauunternehmen Gerner
+        </div>
+        <p>Seit 1953 in Roth: Zuverlässigkeit und Qualität für Neubau, Umbau, Sanierung und Garten- &amp; Landschaftsbau.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Leistungen</h4>
+        <ul>
+          <li><a href="#leistungen">Eingabeplanung</a></li>
+          <li><a href="#leistungen">Bauleistungen</a></li>
+          <li><a href="#leistungen">Umbau</a></li>
+          <li><a href="#leistungen">Sanierung</a></li>
+          <li><a href="#leistungen">Wege &amp; Garten</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Unternehmen</h4>
+        <ul>
+          <li><a href="#unternehmen">Unternehmen</a></li>
+          <li><a href="#philosophie">Philosophie</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Bauunternehmen Rainer Gerner, Roth</span>
+      <span>Industriestraße 2a · 91154 Roth · 09171 - 899023</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Mobile menu toggle
+  var header = document.querySelector('header');
+  var menuToggle = document.querySelector('.menu-toggle');
+  if (header && menuToggle) {
+    menuToggle.addEventListener('click', function(){
+      header.classList.toggle('nav-open');
+    });
+    document.querySelectorAll('nav.links a').forEach(function(link){
+      link.addEventListener('click', function(){ header.classList.remove('nav-open'); });
+    });
+  }
+
+  // Scroll reveal with gentle stagger per parent group
+  var revealEls = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+  if (reduceMotion) {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  } else if ('IntersectionObserver' in window) {
+    revealEls.forEach(function(el){
+      var parent = el.parentElement;
+      var idx = parent._revealIdx || 0;
+      parent._revealIdx = idx + 1;
+      el.style.transitionDelay = Math.min(idx, 6) * 80 + 'ms';
+    });
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ observer.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  // Count-up numbers
+  var counterEls = document.querySelectorAll('[data-count-to]');
+  function animateCount(el){
+    var target = parseInt(el.getAttribute('data-count-to'), 10) || 0;
+    var suffix = el.getAttribute('data-suffix') || '';
+    if (reduceMotion) { el.textContent = target + suffix; return; }
+    var duration = 1200;
+    var start = null;
+    function step(ts){
+      if (start === null) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if (counterEls.length) {
+    if ('IntersectionObserver' in window && !reduceMotion) {
+      var countObserver = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting) {
+            animateCount(entry.target);
+            countObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.4 });
+      counterEls.forEach(function(el){ countObserver.observe(el); });
+    } else {
+      counterEls.forEach(animateCount);
+    }
+  }
+
+  // Vorher/Nachher compare slider
+  document.querySelectorAll('.compare-slider').forEach(function(slider){
+    var media = slider.closest('.project-media');
+    if (!media) return;
+    slider.addEventListener('input', function(){
+      media.style.setProperty('--pos', slider.value + '%');
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
